@@ -38,6 +38,8 @@ h6 {
 
 p {
   margin: 0;
+  text-align: center;
+
 }
 
 a {
@@ -173,13 +175,22 @@ a {
 
   .heading 
     {background-color: rgba(54,54,54,0.7);
-    padding: 45px;
-    height: 50px;
+    padding: 25px;
     color: var(--Platinum);
     font-size: 30px;
     border-bottom: 10px solid var(--Satin);
     text-align: center;
     cursor: pointer;
+    }
+
+    .heading a {
+      color: inherit;
+      text-decoration: underline 0.15em rgba(255, 255, 255, 0); /* TRANSPARENT UNDERLINE */
+      transition: text-decoration-color 300ms; /* ANIMATES UNDERLINE */
+    }
+    
+    .heading a:hover {
+      text-decoration-color: var(--Satin)
     }
 
     .subheading {
@@ -195,36 +206,61 @@ a {
 
   /* FLEXBOX SECTIONS (ABOUT ME / CONTACT ME)*/
 
-  .row {
-    display: flex;
-   
-  }
+ 
   
-  .column {
+  .columnabout {
     display: flex;
-    flex-direction: column;
-    flex: 50%;
+    width: 70%;
     padding: 10px;
-    height: 300px; 
-   justify-content: flex-start;
+    margin: auto;
+  }
+
+  .contactcolumn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 10px;
+    height: 50px; 
+    background-color: var(--Jet);
+    color: var(--Platinum);
+    
+   
   
    
   }
 
+
    /* GRID SECTION */
+
+   .categoryGridArea {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 5px;
+    display: grid;
+    align-content: flex-end;
+    
+  }
+
     
     #categoryGrid {
       margin: 0px 5%;
       display: grid;
-      grid-template-rows: 300px 300px 300px;
-      grid-template-columns: 0.75fr 1fr 1fr;
-      grid-template-areas: "portfolio1 portfolio1 portfolio1"
-      "portfolio2 portfolio3 portfolio4"
-      "portfolio2 portfolio5 portfolio5"
+      grid-template-rows: 300px 300px 300px 300px;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-areas: "portfolio1 portfolio1 portfolio1 portfolio1"
+      "portfolio1 portfolio1 portfolio1 portfolio1"
+      "portfolio2 portfolio2 portfolio3 portfolio3"
+      "portfolio4 portfolio4 portfolio5 portfolio5"
+      
     }
-    
+
+  
     #portfolio1 {
-      background-image: url("../images/horiseon.jpg");
+     background-image: url("../images/horiseon.jpg");
       grid-area: portfolio1;
       background-position: top; /* USEFUL TO SET IMAGE POSITION */
     }
@@ -251,14 +287,7 @@ a {
 
     }
     
-    .categoryGridArea {
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-      margin: 5px;
-      display: grid;
-      align-content: end;
-    }
+ 
   
 
   /* FOOTER CSS */
@@ -353,4 +382,4 @@ a {
       
    
 
-      }
+      }}
