@@ -55,13 +55,14 @@ a {
   
   align-items: center;
   
-  justify-content: space-between;
+  justify-content: center;
   
   padding: 20px;
   
   background-color: var(--Jet);
   
   color: var(--Platinum);
+ 
   
   }
   
@@ -109,6 +110,8 @@ a {
     padding: 5px;
     border-radius: 20px;
     z-index: 100;
+    position: relative;
+    left: -40px;
     
     }
   
@@ -141,12 +144,11 @@ a {
   /* Hero Banner*/
 
   .hero-banner {
-    height: 200px;
+    height: 300px;
     width: 100%;
     position: relative;
     background-size: cover;
-    
-    background-image: url("../images/02-hero-bg.jpg");
+    background-image: url("../images/02-portfolio-2.jpg");
     z-index:-100;
   }
 
@@ -164,24 +166,41 @@ a {
   }
   
   .overlay h2 {
-    font-size: 45px;
-    letter-spacing: 0px;
+    font-size: 50px;
     margin: 0 0 5px;
   }
     
+ /* H2 ANIMATION */
+
+.period {
+  color: var(--Satin);
+  animation: blinker 1.5s linear infinite;
+}
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
 
   /* PAGE HEADINGS SUB HEADINGS */
 
 
   .heading 
-    {background-color: rgba(54,54,54,0.7);
-    padding: 25px;
+    {background-color: rgba(54,54,54,0.8);
+    padding: 30px;
     color: var(--Platinum);
     font-size: 30px;
     border-bottom: 10px solid var(--Satin);
     text-align: center;
     cursor: pointer;
     }
+
+    .heading:hover
+    {background-color: rgba(54,54,54,0.8);
+      padding: 50px;
+      transition: padding 400ms; /* ANIMATES UNDERLINE */;
+     }
 
     .heading a {
       color: inherit;
