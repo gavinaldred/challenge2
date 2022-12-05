@@ -1,8 +1,9 @@
 # <Gavin-Aldred-Portfolio-Project>
 ## Description
 
-A portfolio of work to showcase my skills and talents to employers. Also using tecnhiques recently learned, such as flexbox, CSS grid, media queries and CSS variables.
-
+A portfolio of work to showcase my skills and talents to employers. Also using techniques recently learned, such as flexbox, CSS grid, media queries, and CSS variables.
+Uses flexbox, grid method, positioning, and media queries. Follows semantic HTML best practice and uses comments to guide CSS reading.
+Some CSS tricks were used to produce gradients, animations, and a hamburger menu.
 
 ## Installation
 
